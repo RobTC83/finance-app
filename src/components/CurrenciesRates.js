@@ -42,9 +42,12 @@ export default function CurrenciesRates() {
                 datasets:[{
                     label: "Tipo de Cambio",
                     data: dataValues,
-                    borderColor: "blue",
-                    pointRadius:5,
-                    pointBackgroundColor:"red"
+                    borderColor: "#F39C12",
+                    pointRadius:2,
+                    pointBackgroundColor:"#A04000",
+                    fontColor:"black",
+                    backgroundColor:"#D4EFDF"
+
 
 
                 }],
@@ -78,18 +81,32 @@ export default function CurrenciesRates() {
         <div>
 
 <div>
-                <input 
+
+    
+        <div>
+            <label class="m-3">Fecha de inicio:</label>
+            <input 
+                    class="m-3 p-3 border rounded-lg"
                     type="date"
                     onChange={(e) => {handleDate(e)}}
                     value={date.startDate}
                     name="startDate"
-                />
-                <input 
+            />
+        </div>
+        <div>
+            <label class="m-3">Fecha de fin:</label>
+            <input 
+                    class="m-3 p-3 border rounded-lg"
                     type="date"
                     onChange={(e) => {handleDate(e)}}
                     value={date.endDate}
                     name="endDate"
-                />
+            />
+        </div>
+
+ 
+                
+                
             </div>
 
             {
@@ -98,8 +115,10 @@ export default function CurrenciesRates() {
                     :
 
             
-
-            <Line data={data}/>
+            <div class=" border p-3 m-3" width="1000">
+                    
+                    <Line data={data}/>
+            </div>
 
         }
 

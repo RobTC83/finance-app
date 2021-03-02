@@ -28,7 +28,7 @@ export default function Sidebar() {
         console.log(currencies)
     
     return (
-        <div>
+        <div class="p-5 border shadow">
             <ul class="divide-y divide-gray-300">
             {
                 currencies.map((e,id)=>{
@@ -43,7 +43,6 @@ export default function Sidebar() {
                 })
             }
             </ul>
-
         </div>
     )
 }
