@@ -46,7 +46,41 @@ export default function CurrenciesRates() {
                     pointRadius:2,
                     pointBackgroundColor:"#A04000",
                     fontColor:"black",
-                    backgroundColor:"#D4EFDF"
+                    backgroundColor:"#D4EFDF",
+                    options: {
+                            responsive: true,
+                         maintainAspectRatio : false,
+                         tooltips: {
+                            backgroundColor: "rgba(0,0,0,0.8)",
+                            bodyAlign: "left",
+                            bodyFontColor: "#fff",
+                            bodySpacing: 2,
+                            borderColor: "rgba(0,0,0,0)",
+                            borderWidth: 0,
+                            caretPadding: 2,
+                            caretSize: 5,
+                            cornerRadius: 6,
+                            custom: null,
+                            displayColors: true,
+                            enabled: true,
+                            footerAlign: "left",
+                            footerFontColor: "#fff",
+                            footerFontStyle: "bold",
+                            footerMarginTop: 6,
+                            footerSpacing: 2,
+                            intersect: true,
+                            mode: "nearest",
+                            multiKeyBackground: "#fff",
+                            position: "average",
+                            titleAlign: "left",
+                            titleFontColor: "#fff",
+                            titleFontStyle: "bold",
+                            titleMarginBottom: 6,
+                            titleSpacing: 2,
+                            xPadding: 6,
+                            yPadding: 6,
+                          }
+                       }
 
 
 
@@ -75,6 +109,11 @@ export default function CurrenciesRates() {
     }
 
     console.log(date)
+
+    const options = {
+        maintainAspectRatio: false	// Don't maintain w/h ratio
+
+    }
 
     return (
 
@@ -116,8 +155,9 @@ export default function CurrenciesRates() {
 
             
             <div class=" border p-3 m-3" width="1000">
-                    
-                    <Line data={data}/>
+                    <article className="canvas-container">
+                        <Line data={data} options={options}/>
+                    </article>
             </div>
 
         }

@@ -11,13 +11,32 @@ import CurrenciesRates from './components/CurrenciesRates'
 function App() {
   return (
     <>
+
       <Router>
-        <Header />
-        <div className="flex">
+    
+    <section className="main-two-columns">
+        <div>
           <Sidebar />
-          <Switch>
-            <Route exact path="/:currency" component={CurrenciesRates} />
-          </Switch>
+        </div>
+
+        <div>
+          <Header />
+            <div>
+            <Switch>
+                <Route exact path="/:currency" component={CurrenciesRates} />
+            </Switch>
+
+            </div>
+
+        </div>
+
+    </section>
+
+      
+        <div className="flex">
+          
+          
+          
         </div>
       </Router>
     </>
